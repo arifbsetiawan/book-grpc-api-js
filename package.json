@@ -1,0 +1,23 @@
+{
+  "name": "book-grpc-mongo-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon start"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.1.8",
+    "@grpc/proto-loader": "^0.5.5",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

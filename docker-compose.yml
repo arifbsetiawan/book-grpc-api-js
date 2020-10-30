@@ -1,0 +1,20 @@
+version: '3'
+services:
+    app:
+        container_name: book-grpc-api-js
+        restart: unless-stopped
+        build: .
+        image: book-grpc-api-js
+        working_dir: /home/node/app
+        volumes: 
+            - ./config:/home/node/app/config
+            - ./controllers:/home/node/app/controllers
+            - ./protos:/home/node/app/protos
+            - ./public:/home/node/app/public
+            - ./routes:/home/node/app/routes
+            - ./views:/home/node/app/views
+        environment: 
+            - SERVER_URI={{YOUR_GRPC_BOOK_URI}}
+            - PORT=5000
+        ports: 
+            - 5001:5000
